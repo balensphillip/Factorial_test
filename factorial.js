@@ -1,16 +1,12 @@
-// iterative approach
-function iterativeFactorial(n) {
-  let answer = 1;
-  if (n === 0 || n === 1) {
-    return answer;
+function factorial(n){
+  //base case
+  if(n == 0 || n == 1){
+      return 1;
+  //recursive case
   }
-  for (let i = n; i >= 1; i--) {
-    answer *= i;
+  else{
+      return n * factorial(n-1);
   }
-  return answer;
 }
-const n = 0;
-answer = iterativeFactorial(n);
-console.log(`The factorial of ${n} is ${answer}`);
 
-module.exports = { iterativeFactorial };
+module.exports = { factorial };
